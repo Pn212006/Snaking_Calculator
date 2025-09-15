@@ -25,11 +25,11 @@ void traverse(const vector<string> &grid, int r, int c) {
     else if (ch == '^' || ch == 'v') {
         int newRow = (ch == '^') ? r - 1 : r + 1;
         char savedOp = op;
-        traverse(grid, newRow, c); // branch
+        traverse(grid, newRow, c); 
         op = savedOp;
     }
 
-    traverse(grid, r, c + 1); // move right
+    traverse(grid, r, c + 1); 
 }
 
 long long evaluateGrid(const vector<string> &grid) {
@@ -43,7 +43,7 @@ int main() {
     int n;
     cout << "Enter number of rows: ";
     cin >> n;
-    cin.ignore(); // clear newline from buffer
+    cin.ignore(); 
 
     vector<string> program;
     cout << "Enter each row of the grid:\n";
